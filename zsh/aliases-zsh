@@ -1,0 +1,24 @@
+# basic aliases
+
+# git
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gr='git reset'
+alias gdc='git diff --cached'
+alias gc='git commit'
+alias gcam='git commit --amend'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias gaa='git add . && git add . -u && gs'
+alias gaad='git add . && git add . -u && gdc'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gdfstat="git diff-files --stat"
+alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+alias gphm='git push heroku master'
+alias gpdm='git push demo +HEAD:master'
+alias gppm='git push production master'
+alias gpa='git push &&'
+alias glately='git diff "@{yesterday}" | wc -c'
+

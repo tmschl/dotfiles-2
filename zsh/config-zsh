@@ -1,0 +1,31 @@
+REPORTTIME=10 # print elapsed time when more than 10 seconds
+
+setopt NO_HUP
+setopt NO_LIST_BEEP
+setopt NO_BG_NICE    # don't nice background tasks
+setopt LOCAL_OPTIONS # allow functions to have local options
+setopt LOCAL_TRAPS   # allow functions to have local traps
+
+setopt PROMPT_SUBST
+setopt CORRECT
+setopt COMPLETE_IN_WORD
+setopt IGNORE_EOF
+
+setopt EXTENDED_HISTORY   # add timestamps to history
+setopt INC_APPEND_HISTORY # adds history after each command, not after shell is killed
+unsetopt SHARE_HISTORY    # dont share history between sessions
+
+setopt HIST_VERIFY          # don't execute
+setopt HIST_IGNORE_ALL_DUPS # don't record dupes in history
+setopt HIST_REDUCE_BLANKS   # i.e. when you just hit <CR> or <SPACE><CR>
+
+bindkey '^[^[[D' backward-word
+bindkey '^[^[[C' forward-word
+bindkey '^[[5D' beginning-of-line
+bindkey '^[[5C' end-of-line
+bindkey '^[[3~' delete-char
+bindkey '^[^N' newtab
+bindkey '^?' backward-delete-char
+
+# turn off c-s and c-q traps in iTerm/Terminal.app
+stty -ixon -ixoff
