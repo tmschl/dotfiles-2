@@ -95,13 +95,13 @@ set ttyfast
 set encoding=utf-8 nobomb
 
 " Use line wrapping
-set wrap
-" Use 4 spaces for indentation
-set shiftwidth=4
-" Use 4 spaces for soft tab
-set softtabstop=4
-" Use 4 spaces for tab
-set tabstop=4
+set nowrap
+" Use 2 spaces for indentation
+set shiftwidth=2
+" Use 2 spaces for soft tab
+set softtabstop=2
+" Use 2 spaces for tab
+set tabstop=2
 " Expand tab to spaces
 set expandtab
 " Enable line numbers
@@ -147,3 +147,11 @@ nnoremap Y y$
 if filereadable(glob("$HOME/.vimrc.local"))
     source $HOME/.vimrc.local
 endif
+
+" Set semi-colon to colon in visual mode
+set gdefault
+nnoremap ; :
+
+" Enable Tab indent and SHIFT-TAB unindent in visual mode
+vnoremap <silent> <TAB> >gv
+vnoremap <silent> <S-TAB> <gv
