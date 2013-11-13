@@ -1,6 +1,6 @@
 # Dotfiles (Nicolas Gallagher)
 
-My OS X dotfiles.
+Not Nick's OS X dotfiles.
 
 
 ## How to install
