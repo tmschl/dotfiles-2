@@ -95,7 +95,7 @@ set ttyfast
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 
-" Use line wrapping
+" Don't use line wrapping
 set nowrap
 " Use 2 spaces for indentation
 set shiftwidth=2
@@ -109,10 +109,8 @@ set expandtab
 set number
 " Highlight current line
 set cursorline
-" Increase default number of lines
-set lines=40
-" Start scrolling three lines before the horizontal window border
-set scrolloff=3
+" Start scrolling two lines before the horizontal window border
+set scrolloff=2
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 
@@ -157,12 +155,15 @@ nnoremap ; :
 vnoremap <silent> <TAB> >gv
 vnoremap <silent> <S-TAB> <gv
 
+" Allow single line text bubbling
 nmap <S-k> [e
 nmap <S-j> ]e
 
+" Allow multi-line text bubbling
 vmap <S-k> [egv
 vmap <S-j> ]egv
 
+" Jump to end of line and beginning of line in visual or normal
 nmap <S-h> ^
 vmap <S-h> ^
 nmap <S-h> $
