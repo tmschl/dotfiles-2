@@ -10,6 +10,7 @@ set nocompatible
 silent! runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Call pathogen plugin management
 silent! call pathogen#infect()
+call pathogen#helptags()
 
 if has("autocmd")
     " Load files for specific filetypes
@@ -155,3 +156,14 @@ nnoremap ; :
 " Enable Tab indent and SHIFT-TAB unindent in visual mode
 vnoremap <silent> <TAB> >gv
 vnoremap <silent> <S-TAB> <gv
+
+nmap <S-k> [e
+nmap <S-j> ]e
+
+vmap <S-k> [egv
+vmap <S-j> ]egv
+
+nmap <S-h> ^
+vmap <S-h> ^
+nmap <S-h> $
+vmap <S-h> $
