@@ -168,3 +168,9 @@ nmap <S-h> ^
 vmap <S-h> ^
 nmap <S-h> $
 vmap <S-h> $
+
+" Easier Window jumping
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
