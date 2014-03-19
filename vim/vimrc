@@ -85,15 +85,14 @@ endif
 " Show hidden files when using ctrlp
 let g:ctrlp_show_hidden = 1
 
-" Change mapleader
-let mapleader=","
-
 " Backspace through everything in INSERT mode
-set backspace=indent,eol,start
+" set backspace=indent,eol,start
+
 " Optimize for fast terminal connections
-set ttyfast
+" set ttyfast
+
 " Use UTF-8 without BOM
-set encoding=utf-8 nobomb
+" set encoding=utf-8 nobomb
 
 " Don't use line wrapping
 set nowrap
